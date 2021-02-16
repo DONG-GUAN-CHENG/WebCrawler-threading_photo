@@ -56,7 +56,7 @@ def creat_folder(photo_name):
     else:
         print(photo_name+"資料夾已存在")
     return folder_name
-## 建立多執行緒的函式_城市一次最多只能開啟100個執行緒
+## 建立多執行緒的函式_程式一次最多只能開啟100個執行緒
 import threading
 def get_photobythread(folder_name,photo_name, photo_list):
     download_num=len(photo_list)
