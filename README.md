@@ -12,4 +12,4 @@ Author:DONG GUAN-CHENG
 
 ##### 這邊提到```CPU密集型任務```，也順便來補充一下，假如程式絕大多數時間在計算上，主要消耗CPU資源，只要花在任務切換的時間越多，CPU的效率就越低=>>取決於CPU的核心數
 
-
+![error](https://github.com/DONG-GUAN-CHENG/WebCrawler-threading_photo/blob/master/result.png)
