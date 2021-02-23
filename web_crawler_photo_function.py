@@ -23,7 +23,7 @@ def get_photolist(photo_name, download_num):
         url = 'https://zh.pngtree.com/so/' + photo_name+'/'+str(page)
         # 設定連結
         html = requests.get(url)
-        html.encoding = 'utf-8'
+        html.encoding = 'utf-8' ＃指定編碼
         bs = BeautifulSoup(html.text, 'lxml')  # 解析網頁
         photo_item = bs.find_all('div', {'class': "mb-picbox"})
 
@@ -34,11 +34,11 @@ def get_photolist(photo_name, download_num):
             if photo in photo_list:
                 return photo_list
             if photo == '/static/img/blank.gif':
-                photo=photo_item[1].find('img')['data-lazy']
-            photo_list.append(photo)
+                photo=photo_item[1].find('img')['data-lazy']#尋找標籤img並取出'src'之中的內容
+            photo_list.append(photo) #將連接append到list尾端
             if len(photo_list)>=download_num:
                 return photo_list
-        page+=1
+        page+=1 #頁數加1
 
 ## 分門別類的儲存圖片
 import os
